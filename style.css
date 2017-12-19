@@ -8,6 +8,7 @@
 }
 
 
+
 /************/
 
 body {
@@ -25,8 +26,9 @@ table {
 td {
     vertical-align: top;
 }
+
 li {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 ul,
@@ -70,9 +72,18 @@ p {
     color: #FFF;
 }
 
+.workHeader {
+    /*margin-top: 20px;*/
+
+}
+
 .designation {
     font-size: 11px;
     font-weight: bold;
+}
+
+.experienceGroup {
+    margin-top: 10px;
 }
 
 .leftColumnHeader {
@@ -89,7 +100,9 @@ p {
 .whiteBottomBorder {
     border-bottom: solid 1px #AAA;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
+
 
 
 
@@ -135,4 +148,3 @@ p {
     font-weight: bold;
     font-size: 15px;
 }
-
