@@ -1,10 +1,13 @@
 /**********/
+
 @media print and (color) {
-  * {
-    -webkit-print-color-adjust: exact; 
-    print-color-adjust: exact;
-  }
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
+
+
 /************/
 
 body {
@@ -14,12 +17,23 @@ body {
     margin: 0;
     color: #DDD;
 }
+
 table {
     width: 100%;
 }
+
 td {
-    vertical-align:top;
+    vertical-align: top;
 }
+li {
+    font-size: 12px;
+}
+
+ul,
+p {
+    margin: 0;
+}
+
 #phone-icon {
     height: 18px;
 }
@@ -74,20 +88,24 @@ td {
 
 .whiteBottomBorder {
     border-bottom: solid 1px #AAA;
+    margin-bottom: 10px;
 }
 
 
+
 /* experience */
+
 .experience {
     padding-left: 25px;
     margin: 0;
     /*line-height: 2;*/
-    background-color: #BFBFBF;
+    background-color: #DDD;
     color: #1F2F3D;
 }
 
 .blueBottomBorder {
     border-bottom: solid 1px #1F2F3D;
+    margin-bottom: 10px;
 }
 
 .rightColumnHeader {
@@ -100,8 +118,9 @@ td {
 }
 
 .duration {
-    font-size: 12px;
-    font-style: italic;
+    font-size: 11px;
+    /*font-style: italic;*/
+    font-weight: bold;
     margin-left: 0px;
 }
 
@@ -110,11 +129,8 @@ td {
     font-weight: bold;
 }
 
-li {
-    font-size: 12px;
+.workdDetailHeader {
+    font-weight: bold;
+    font-size: 15px;
 }
 
-ul,
-p {
-    margin: 0;
-}
