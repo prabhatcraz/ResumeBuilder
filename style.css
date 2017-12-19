@@ -62,7 +62,7 @@ p {
 .header {
     text-align: center;
     position: relative;
-    top: 0;
+    top: 20px;
 }
 
 .name {
@@ -96,6 +96,7 @@ p {
 /* experience */
 
 .experience {
+
     padding-left: 25px;
     margin: 0;
     /*line-height: 2;*/
@@ -106,6 +107,7 @@ p {
 .blueBottomBorder {
     border-bottom: solid 1px #1F2F3D;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .rightColumnHeader {
