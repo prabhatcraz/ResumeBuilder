@@ -7,20 +7,32 @@
     }
 }
 
+@page {
+    size: 7in 9.25in;
+    margin: 1mm 1mm 1mm 1mm;
+}
 
 
 /************/
 
 body {
-    /*font-family: "Courier New", Courier, monospace;*/
-    font-family: "sans-serif", Andale Mono, monospace;
-    letter-spacing: -1px;
+    /*width: 800px;*/
+    font-family: Verdana, Geneva, sans-serif;
     margin: 0;
     color: #DDD;
+    font-size: 12px;
+}
+
+#content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td {
@@ -28,12 +40,13 @@ td {
 }
 
 li {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 ul,
 p {
     margin: 0;
+    /* padding-left: 25px; */
 }
 
 #phone-icon {
@@ -56,30 +69,30 @@ p {
 
 .bio {
     background-color: #1F2F3D;
-    width: 280px;
+    width: 150px;
     padding-left: 10px;
     padding-right: 10px;
+    overflow: hidden;
 }
 
 .header {
     text-align: center;
     position: relative;
     top: 20px;
+    margin-bottom: 50px;
 }
 
 .name {
-    font-size: 24px;
+    font-size: 20px;
     color: #FFF;
 }
 
 .workHeader {
     /*margin-top: 20px;*/
-
 }
 
 .designation {
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 10px;
 }
 
 .experienceGroup {
@@ -95,6 +108,7 @@ p {
 .leftColumnDetails {
     font-size: 12.5px;
     color: #EEE;
+    text-align: justify;
 }
 
 .whiteBottomBorder {
@@ -106,15 +120,14 @@ p {
 
 
 
+
 /* experience */
 
 .experience {
-
-    padding-left: 25px;
-    margin: 0;
-    /*line-height: 2;*/
     background-color: #DDD;
     color: #1F2F3D;
+    text-align: justify;
+    padding: 5px;
 }
 
 .blueBottomBorder {
@@ -124,27 +137,23 @@ p {
 }
 
 .rightColumnHeader {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 18px;
 }
 
-.experienceDesignation {
-    font-weight: bold;
-}
+.experienceDesignation {}
 
 .duration {
-    font-size: 11px;
-    /*font-style: italic;*/
-    font-weight: bold;
+    font-size: 10px;
+    font-style: italic;
     margin-left: 0px;
 }
 
 .companyName {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
 }
 
 .workdDetailHeader {
-    font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
+    text-decoration: underline;
+    margin: 5px;
 }

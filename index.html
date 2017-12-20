@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <table>
+    <table id="content">
         <tr>
             <td class="bio">
                 <div class="header">
@@ -17,20 +17,20 @@
                         <div>
                             <img class="profileImage" src="prabhat.png">
                         </div>
-                        <div class="name"><b>Prabhat Ranjan<b></div><span class="name"></span>
-                        <span class="designation"> Software Development Engineer</span>
-                        <br><br><br><br>
+                        <div class="name">Prabhat Ranjan</div><span class="name"></span>
+                        <span class="designation"> SDE @ Amazon</span>
                     </div>
                 </div>
                 <div class="about">
                     <p class="aboutHeader leftColumnHeader whiteBottomBorder">ABOUT ME:</p>
-                    <div class="aboutDetails leftColumnDetails">I am currently working with <strong>AWS WorkMail</strong> where I am part of a team working towards launching a new <b>Search</b> service to enhance search experience of WorkMail customers. Complexity of the service lies in delivering high performance while providing customer controlled encryption of contents and highly generic nature of the service. I have been part of other domains inside Amazon where I was involved in designing and development of HTML5 frameworks to redesign Mobile, Tablet and deskop pages. I also worked as part of Kindle team where I was developing Android applications to be shipped with Kindle fire. Prior to joining Amazon, I worked in Deloitte where I was involved in building Data Warehouses.
-                        </div>
+                    <div class="aboutDetails leftColumnDetails">
+                        I have 6+ years of product development experience in AWS and Amazon Retail where I gained experience in building highly scalable distributed system and built reusable, high performant front-end applications using HTML5. I love to do test-oriented development  Java and use Python and JavaScript as my side arms to build tools to ease operational overload. 
                     </div>
                     <div class="work">
                         <p class="workHeader leftColumnHeader whiteBottomBorder">SKILLS HIGHLIGHTS:</p>
                         <div class="aboutDetails leftColumnDetails">
-                            Java, Python, JavaScript, HTML5, Perl, Guice, Junit, DynamoDB, ElasticSearch, S3, KMS, SQS, SNS, AWS StepFunctions, Flask, Android, JQuery, Backbone.js, Underscore.js, PhantomJS
+                            <b>Languages    :</b> Java, Python, JavaScript, HTML5, Perl<br/>
+                            <b>FrameWorks/Technologies :</b> Guice, Junit, DynamoDB, ElasticSearch, S3, KMS, SQS, SNS, AWS StepFunctions, Flask, Android, JQuery, Backbone.js, Underscore.js, PhantomJS
                         </div>
                     </div>
                     <div class="contact">
@@ -93,17 +93,19 @@
                     </div>
                     <!-- <p class="experienceDesignation">Software Development Engineer</p> -->
                     <p class="companyWork">
-                        <p class="workdDetailHeader">&nbsp;Key Deliverables:</p>
+                        <p class="workdDetailHeader">Key Deliverables:</p>
                         <ul>
                             <li>Part of launching a new search service to enable faster search on WebUI of WorkMail.</li>
                             <li>Tech lead for delivering <a href="https://aws.amazon.com/about-aws/whats-new/2016/10/amazon-workmail-now-supports-interoperability-with-microsoft-exchange-server/">Interoperability</a> feature of WorkMail with Exchange servers over <a href="https://msdn.microsoft.com/en-us/library/office/dd877045(v=exchg.140).aspx">EWS</a> protocol</li>
                         </ul>
-                        <p class="workdDetailHeader">&nbsp;Technical Details</p>
+                        <p class="workdDetailHeader">Details</p>
                         <ul>
-                            <li>Reactive programming approach to design asynchronous APIs to index and delete customer data.</li>
+                            <li>Design and development of asynchronous CRUD operation in high throughput environment.</li>
                             <li>Designed data model to efficiently ingest, retrieve, delete customer data with NoSQL databases involving DynamoDB & ElasticSearch</li>
+                            <li>Refining design to avoid hot-spots in DynamoDB.</li>
+                            <li>Design of generic data model to support multi-tenency.</li>
+                            <li>Decoupled components through SQS and SNS.</li>
                             <li>Designed and implemented workflow based API to bulk delete customer data using AWS StepFunctions.</li>
-                            <li>Developed frameworks to poll SQS and StepFunctions efficiently.</li>
                             <li>Designed mechanisms to backfill customer data in live system with zero downtime.</li>
                             <li>Developed code using test based development, amounting to ~100% test coverage.</li>
                             <li>Hands on experience with with AWS services like IAM, KMS, S3, SQS, SNS.</li>
@@ -111,45 +113,47 @@
                             <li>Wrote application to load test services to determine service bottlenecks, dependency behavior, scaling projections.</li>
                             <li>Wrote several tools to ease operational burden like manually managing failed StepFunctions executions, backfilling DynamoDB.</li>
                             <li>Involved in review of peer's design.</li>
-                            <li>Trained new comers and bringing them to speed.</li>
+                            <li>Trained junior colleagues to bring them to speed.</li>
                         </ul>
                     </p>
                 </div>
                 <div class="experienceGroup">
                     <div class="compnay">
-                        <span class="companyName">&#9658;&nbsp;Amazon.com, Bangalore</span>
+                        <span class="companyName">&#9658;&nbsp;Amazon(Retail), Bangalore</span>
                         <span class="duration">(Feb-2013 - Jan 2016)</span>
                     </div>
                     <!-- <p class="experienceDesignation">Software Development Engineer</p> -->
                     <p class="companyWork">
-                        <p class="workdDetailHeader">&nbsp;Key Deliverables:</p>
+                        <p class="workdDetailHeader">Key Deliverables:</p>
                         <ul>
                             <li>Redesign of Mobile, Tablet and Desktop pages.</li>
                             <li>Development of multiple re-usable widgets to be used across amazon pages.</li>
                         </ul>
-                        <p class="workdDetailHeader">&nbsp;Technical Details</p>
+                        <p class="workdDetailHeader">Details</p>
                         <ul>
-                            <li>Built framework to develop responsive, low latency and highly re-usable widgets.</li>
+                            <li>Developed JavaScript framework to develop re-usable widgets.</li>
                             <li>Worked with common Javascript frameworks and libraries like jQuery, Underscore, Backbone.</li>
                             <li>Optimization of network calls to minimize render time.</li>
                             <li>Optimization of call pattern and payload to increase cache hit of backend service.</li>
                             <li>Implementation & Optimization of infinite scroll for mobile and tablet.</li>
+                            <li>Instrumentation of cli</li>
                         </ul>
                     </p>
                 </div>
                 <div class="experienceGroup">
                     <div class="compnay">
-                        <span class="companyName">&#9658;&nbsp;Amazon.com, Chennai</span>
+                        <span class="companyName">&#9658;&nbsp;Amazon(Kindle), Chennai</span>
                         <span class="duration">(July 2011 - Feb 2013)</span>
                     </div>
                     <!-- <p class="experienceDesignation">Software Development Engineer</p> -->
                     <p class="companyWork">
-                        <p class="workdDetailHeader">&nbsp;Key Deliverables:</p>
+                        Joined Kindle team and worked on building android application like mentioned below:
                         <ul>
                             <li>Kindle Fire Ads Processing app</li>
                             <li>Kidnle Fire Out of the box experience app.</li>
                             <li>Kidnle Fire Out of the box experience app.</li>
                         </ul>
+                        <p class="workdDetailHeader">&nbsp;Details:</p>
                     </p>
                 </div>
                 <div class="experienceGroup">
