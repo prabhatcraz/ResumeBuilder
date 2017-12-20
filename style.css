@@ -13,10 +13,10 @@
 }
 
 
+
 /************/
 
 body {
-    /*width: 800px;*/
     font-family: Verdana, Geneva, sans-serif;
     margin: 0;
     color: #DDD;
@@ -47,6 +47,11 @@ ul,
 p {
     margin: 0;
     /* padding-left: 25px; */
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
 }
 
 #phone-icon {
@@ -118,9 +123,6 @@ p {
 }
 
 
-
-
-
 /* experience */
 
 .experience {
@@ -149,11 +151,14 @@ p {
 }
 
 .companyName {
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .workdDetailHeader {
     font-size: 14px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin: 5px;
+    text-style: oblique;
+    text-orientation: sideways-right;
 }
