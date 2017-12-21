@@ -101,7 +101,7 @@ a {
 }
 
 .experienceGroup {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .leftColumnHeader {
@@ -111,7 +111,7 @@ a {
 }
 
 .leftColumnDetails {
-    font-size: 12.5px;
+    font-size: 10.5px;
     color: #EEE;
     text-align: justify;
 }
@@ -156,9 +156,8 @@ a {
 }
 
 .workdDetailHeader {
-    font-size: 14px;
-    /* text-decoration: underline; */
+    font-size: 12px;
     margin: 5px;
-    text-style: oblique;
+    font-weight: bold;
     text-orientation: sideways-right;
 }
