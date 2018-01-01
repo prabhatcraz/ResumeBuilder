@@ -2,196 +2,69 @@
 <html>
 
 <head>
-    <title>Prabhat Ranjan</title>
-    <style type="text/css">
-    @import url("style.css");
-    </style>
+    <title>Resume Builder</title>
+    <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="js/data/data.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <table id="content">
-        <tr>
-            <td class="bio">
-                <div class="header">
-                    <div class="row">
-                        <div>
-                            <img class="profileImage" src="prabhat.png">
-                        </div>
-                        <div class="name">Prabhat Ranjan</div><span class="name"></span>
-                        <span class="designation"> SDE @ Amazon</span>
-                    </div>
-                </div>
-                <div class="about">
-                    <p class="aboutHeader leftColumnHeader whiteBottomBorder">ABOUT ME:</p>
-                    <div class="aboutDetails leftColumnDetails">
-                        I have 6+ years of experience in Product Development in Amazon where I gained experience in building highly scalable distributed system. I also built front-end applications using HTML5 which were used in high volume events like <u>Black Friday</u>, <u>Prime Day sales</u> and <u>Diwali Dhamaka</u>. I love test-oriented development in Java and use Python and JavaScript as my side arms to build tools to ease operational overload.
-                    </div>
-                    <div class="work">
-                        <p class="workHeader leftColumnHeader whiteBottomBorder">SKILLS HIGHLIGHTS:</p>
-                        <div class="aboutDetails leftColumnDetails">
-                            <b>Languages    :</b> Java, Python, JavaScript, HTML5, Perl
-                            <br/>
-                            <b>FrameWorks/Technologies :</b> Guice, Junit, DynamoDB, ElasticSearch, S3, KMS, SQS, SNS, AWS StepFunctions, Flask, Android, JQuery, Backbone.js, Underscore.js, PhantomJS
+    <script type="text/template" id="layout">
+        <table id="content">
+            <tr>
+                <td class="bio">
+                    <div class="header">
+                        <div class="row">
+                            <div>
+                                <img class="profileImage" src="<%= imageSrc %>">
+                            </div>
+                            <div class="name">
+                                <%= name %>
+                            </div><span class="name"></span>
+                            <span class="designation"> <%= designation %></span>
                         </div>
                     </div>
-                    <div class="education">
-                        <p class="workHeader leftColumnHeader whiteBottomBorder">EDUCATION:</p>
-                        <div class="aboutDetails leftColumnDetails">
-                            B.E., Information Technology <i>(2006-10)</i>
-                            <br/> Birla Institute of Technology, Mesra
-                            <br/>
-                        </div>
-                    </div>
-                    <div class="contact">
-                        <p class="contactHeader leftColumnHeader whiteBottomBorder">CONTACT ME:</p>
-                        <table class="leftColumnDetails">
-                            <tr>
-                                <td>Mobile</td>
-                                <td>:</td>
-                                <td>+31-633628685</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>:</td>
-                                <td><a href="mailto:prabhat.ranjan32@gmail.com" target="_top">prabhat.ranjan32@gmail.com</a></td>
-                            </tr>
-                            <tr>
-                                <td>Address</td>
-                                <td>:</td>
-                                <td>The Hague, Netherlands</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="personal">
-                        <p class="personalHeader leftColumnHeader whiteBottomBorder">PERSONAL INFO:</p>
-                        <table class="leftColumnDetails">
-                            <tr>
-                                <td>Name</td>
-                                <td>:</td>
-                                <td>Prabhat Ranjan</td>
-                            </tr>
-                            <tr>
-                                <td>Birthday</td>
-                                <td>:</td>
-                                <td>26-Aug-1987</td>
-                            </tr>
-                            <tr>
-                                <td>Nationality</td>
-                                <td>:</td>
-                                <td>Indian</td>
-                            </tr>
-                            <tr>
-                                <td>Born</td>
-                                <td>:</td>
-                                <td>Ranchi, India</td>
-                            </tr>
-                            <tr>
-                                <td>Languages</td>
-                                <td>:</td>
-                                <td>English, Hindi</td>
-                            </tr>
-                        </table>
-                    </div>
-            </td>
-            <td class="experience">
-                <div class="rightColumnHeader blueBottomBorder">EXPERIENCE:</div>
-                <div class="experienceGroup">
-                    <div class="compnay">
-                        <span class="companyName">AWS WorkMail, The Hague, Netherlands</span>
-                        <span class="duration">(Jan-2016 - till date)</span>
-                    </div>
-                    <!-- <p class="experienceDesignation">Software Development Engineer</p> -->
-                    <p class="companyWork">
-                        <p class="workdDetailHeader">Key Deliverables:</p>
-                        <ul>
-                            <li>Part of <b>launching a new search service</b> to enable faster search on WorkMail Web-Application.</li>
-                            <li>Tech lead for delivering <a href="https://aws.amazon.com/about-aws/whats-new/2016/10/amazon-workmail-now-supports-interoperability-with-microsoft-exchange-server/" target="_blank">Interoperability</a> feature of WorkMail with Exchange servers over <a href="https://msdn.microsoft.com/en-us/library/office/dd877045(v=exchg.140).aspx" target="_blank">EWS</a> protocol.</li>
-                        </ul>
-                        <p class="workdDetailHeader">Details</p>
-                        <ul>
-                            <li>Designed and developed asynchronous <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete" target="_blank">CRUD</a> APIs for high throughput system.</li>
-                            <li>Designed generic data model to support <b>multi-tenency</b>.</li>
-                            <li>Decoupled different components of the system through SQS and SNS.</li>
-                            <li>Designed data model to efficiently ingest, search and delete data from <b>ElasticSearch</b>.</li>
-                            <li>Refined data model to avoid hot-spots while interacting with DynamoDB.</li>
-                            <li>Implemented asynchronous API to perform bulk deletion using <b>AWS StepFunctions.</b></li>
-                            <li>Involved in <b>test-driven development</b>, amounting to <b>~100% code coverage.</b></li>
-                            <li>Dealt with data-security via <b>customer controlled encryption</b> with KMS.</li>
-                            <li>Wrote application for <b>load testing</b> to determine service bottlenecks, dependency behavior and scaling projections.</li>
-                            <li>Helped in automating infrastructure setup using <b>CloudFormation</b>.</li>
+                </td>
+                <td class="experience"></td>
+            </tr>
+        </table>
+    </script>
+    
+    <script type="text/template" id="leftSectionTile">
+        <div>
+            <p class="aboutHeader leftColumnHeader whiteBottomBorder"><%= title %></p>
+            <div class="aboutDetails leftColumnDetails">
+                <%= detail %>
+            </div>
+        </div>
+    </script>
 
-                            <li>Enhanced <b>Operational Excellence</b> by writing tools to manage StepFunctions executions, backfill DynamoDB, etc.</li>
-                            <li>Planned and executed complex backfilling of DynamoDB table in live system with zero downtime.</li>
-                            <li>Involved in Security review by preparing Threat model and data flow diagrams.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="experienceGroup">
-                    <div class="compnay">
-                        <span class="companyName">Amazon(Retail), Bangalore, India</span>
-                        <span class="duration">(Feb-2013 - Jan 2016)</span>
-                    </div>
-                    <!-- <p class="experienceDesignation">Software Development Engineer</p> -->
-                    <p class="companyWork">
-                        <p class="workdDetailHeader">Key Deliverables:</p>
-                        <ul>
-                            <li>Redesign of Mobile, Tablet and Desktop pages.</li>
-                            <li>Development of multiple re-usable widgets to be used across amazon pages.</li>
-                        </ul>
-                        <p class="workdDetailHeader">Details</p>
-                        <ul>
-                            <li>Developed a unified HTML5 framework to develop responsive, re-usable and internationalized widgets for Mobile, Tablet and Desktop pages.</li>
-                            <li>Implemented and optimized <b>Infinite scroll</b> for Mobile and Tablet pages.</li>
-                            <li>Introduced JavaScript Unit Testing to the team for the first time.</li>
-                            <li>Hands-on with JavaScript libraries like <b>jQuery, Underscore, Backbone.</b></li>
-                            <li>Optimized JavaScript code to process high volume of items, enhancing page-render latency.</li>
-                            <li>Enhanced framework design to <b>optimize Network Calls</b> resulting in better <a href="https://en.wikipedia.org/wiki/Above_the_fold" target="_blank">Above-the-fold</a> latency.</li>
-                            <li>Optimized Ajax payload to <b>increase backend cache-hit</b>.</li>
-                            <li>Implemented instrumentation of widgets to gather user behavior data.</li>
-                            <li>Took part in requirement discussion with Product Manager and UX Designer.</li>
-                            <li>Lead project to make mobile pages usable in <b>hybrid mobile applications</b>.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="experienceGroup">
-                    <div class="compnay">
-                        <span class="companyName">Amazon(Kindle), Chennai, India</span>
-                        <span class="duration">(July 2011 - Feb 2013)</span>
-                    </div>
-                    <p class="companyWork">
-                        <p class="workdDetailHeader">Key Deliverables:</p>
-                        <ul>
-                            <li>Kindle Fire LockScreen Ads LifeCycle Manager</li>
-                            <li>Kindle Fire Out Of The Box Experience Application</li>
-                            <li>Kindle Fire Account Management Application</li>
-                        </ul>
-                        <p class="workdDetailHeader">Details</p>
-                        <ul>
-                            <li>Gained hands on experience with building Android applications.</li>
-                            <li>Single handedly delivered applications like "My Account" which were integrated with FireView Application.</li>
-                            <li>Learnt Development with Scrum and Agile methodologies.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="experienceGroup">
-                    <div class="compnay">
-                        <span class="companyName">Deloitte US India, Hyderabad, India</span>
-                        <span class="duration">(June 2010 - July 2011)</span>
-                    </div>
-                    <p class="experienceDesignation">Business Technology Analyst</p>
-                    <p class="companyWork">
-                        <ul>
-                            <li>Involved in development of Data Warehouse using ETL tools like Informatica.</li>
-                            <li>Associated in generation of reports for the end users to use the Data warehouse.</li>
-                            <li>Engaged with unit-testing of Data Warehouse by writing SQL queries for end-to-end workflow.</li>
-                        </ul>
-                    </p>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <div class="content">
-    </div>
+    <script type="text/template" id="rightSectionGroup">
+        <div class="rightColumnHeader blueBottomBorder"><%= groupTitle %></div>
+        <% _.each(sections, function(section) { %> 
+            <div class="company">
+                <span class="companyName"><%= section.companyName %></span>
+                <span class="duration"><%= section.duration %></span>
+                
+                <% _.each(section.details, function(detail) { %> 
+                    <p class="workdDetailHeader"><%= detail.title %></p>
+                    <ul>
+                    <% _.each(detail.items, function(item) { %> 
+                        <li><%= item %></li>
+                    <% }); %>
+                    </ul>
+                <% }); %>
+            </div>
+        <% }); %>
+    </script>
+    
+    <script type="text/template" id=""></script>
+    
+    <script type="text/template" id=""></script>
+
+    <div id="container"></div>
 </body>
 
 </html>
