@@ -51,6 +51,22 @@ ResumeBuilder.prototype = {
 
 
 $(document).ready(function() {
-    var builder = new ResumeBuilder(resumeData);
-    builder.render();
+    window.editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: "application/ld+json",
+        continueComments: "Enter",
+        extraKeys: {"Ctrl-Q": "toggleComment"}
+      });
+
+    window.editor.setValue(JSON.stringify(resumeData, null, 2));
+
+
+    $("#generateResume").click(function(event) {
+        event.preventDefault();
+        var resumeData = editor.getValue();
+        resumeData = JSON.parse(resumeData);
+        var builder = new ResumeBuilder(resumeData);
+        builder.render();
+    });
 });
