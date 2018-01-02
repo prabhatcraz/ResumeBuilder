@@ -65,7 +65,8 @@ $(document).ready(function() {
         extraKeys: { "Ctrl-Q": "toggleComment" }
     });
 
-    window.editor.setValue(JSON.stringify(resumeData, null, 2));
+    var editoContent = localStorage.resumeContent || JSON.stringify(resumeData, null, 2);
+    window.editor.setValue(editoContent);
 
     function getEditorcontent() {
 
@@ -73,7 +74,7 @@ $(document).ready(function() {
             var resumeData = editor.getValue();
             resumeData = JSON.parse(resumeData);
             return resumeData;
-        }catch(err) {
+        } catch (err) {
             alert("Something wrong with your JSON");
         }
     }
@@ -91,5 +92,29 @@ $(document).ready(function() {
         var builder = new ResumeBuilder(getEditorcontent());
         builder.render();
     });
+
+    $("#save").click(function(event) {
+        event.preventDefault();
+        localStorage.resumeContent = window.editor.getValue();
+
+        $(".savedMessage").show().delay(1000).fadeOut();
+    });
+
+    // $(window).keypress(function(event) {
+    //     console.log(event.which);
+    //     console.log(event);
+    //     if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) return true;
+    //     event.preventDefault();
+    //     localStorage.resumeContent = window.editor.getValue();
+
+    //     $(".savedMessage").show().delay(2000).fadeOut();
+    //     return false;
+    // });
+
+    $(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $("#container").html("");
+    }
+});
 
 });
