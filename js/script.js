@@ -46,6 +46,12 @@ ResumeBuilder.prototype = {
             $(".experience").append(tileHtml);
         });
 
+        $("#printit").click(function() {
+            window.print()
+        });
+        $("#close").click(function() {
+            $("#container").html("");
+        })
     }
 };
 
@@ -56,17 +62,34 @@ $(document).ready(function() {
         matchBrackets: true,
         mode: "application/ld+json",
         continueComments: "Enter",
-        extraKeys: {"Ctrl-Q": "toggleComment"}
-      });
+        extraKeys: { "Ctrl-Q": "toggleComment" }
+    });
 
     window.editor.setValue(JSON.stringify(resumeData, null, 2));
 
+    function getEditorcontent() {
+
+        try {
+            var resumeData = editor.getValue();
+            resumeData = JSON.parse(resumeData);
+            return resumeData;
+        }catch(err) {
+            alert("Something wrong with your JSON");
+        }
+    }
+
+    $("#genratePdf").click(function(event) {
+        event.preventDefault();
+        var builder = new ResumeBuilder(getEditorcontent());
+        builder.render();
+        window.print();
+        $("#container").html("");
+    });
 
     $("#generateResume").click(function(event) {
         event.preventDefault();
-        var resumeData = editor.getValue();
-        resumeData = JSON.parse(resumeData);
-        var builder = new ResumeBuilder(resumeData);
+        var builder = new ResumeBuilder(getEditorcontent());
         builder.render();
     });
+
 });

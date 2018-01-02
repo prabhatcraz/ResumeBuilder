@@ -17,11 +17,7 @@
     margin: 1mm 1mm 1mm 1mm;
 }
 
-
-
-
 /************/
-
 body {
     font-family: Verdana, Geneva, sans-serif;
     margin: 0;
@@ -29,15 +25,28 @@ body {
     font-size: 12px;
 }
 
+h1 {
+    margin:0;
+}
+
 #content {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
+    opacity: 1.0;
+    filter: 1.0;
 }
 
-#container {
-    /*height: 1200px;*/
-    /*border: solid 1px black;*/
+#resumeContainer {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    z-index: 100;
+    width: 100%;
+    background-color: #333;
+    opacity: 0.9;
+    filter: 0.9;
 }
 
 table {
@@ -60,10 +69,6 @@ p {
     /* padding-left: 25px; */
 }
 
-a {
-    text-decoration: underline;
-    color: inherit;
-}
 
 #phone-icon {
     height: 18px;
@@ -137,10 +142,7 @@ a {
     margin-top: 10px;
 }
 
-
-
-/* experience */
-
+/*** experience ***/
 .experience {
     background-color: #DDD;
     color: #1F2F3D;
@@ -176,20 +178,4 @@ a {
     margin: 5px;
     font-weight: bold;
     text-orientation: sideways-right;
-}
-
-
-/*** */
-#jsonInput {
-    border: solid 1px black;
-    
-    width: 1200px;
-    /*height: 00px;*/
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.inputBoxTitle {
-    color: #333;
 }
