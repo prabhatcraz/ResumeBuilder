@@ -13,7 +13,7 @@ PageController.prototype = {
 
             return resumeData;
         } catch (err) {
-            alert("Something wrong with your JSON");
+            // alert("Something wrong with your JSON");
         }
     },
 
@@ -67,6 +67,6 @@ PageController.prototype = {
             }
         });
 
-        self.refreshResume();
+        // self.refreshResume();
     }
 };

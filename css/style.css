@@ -6,10 +6,23 @@
         print-color-adjust: exact;
     }
 
-    /* to make html selectors non-printable.*/
     .noprint {
         display: none;
     }
+
+    .container {
+        display: block;
+        margin: 0 auto;
+        /*margin-bottom: 0.5cm;*/
+        box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    }
+
+    /*#resumeContainer {
+        background-color: #333;
+        opacity: 0.9;
+        filter: 0.9;
+        margin: 10px;
+    }*/
 }
 
 @page {
@@ -17,7 +30,19 @@
     margin: 1mm 1mm 1mm 1mm;
 }
 
+page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    /*margin-bottom: 0.5cm;*/
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    width: 21cm;
+    height: 27.7cm;
+}
+
+
 /************/
+
 body {
     font-family: Verdana, Geneva, sans-serif;
     margin: 0;
@@ -26,25 +51,19 @@ body {
 }
 
 h1 {
-    margin:0;
+    margin: 0;
 }
 
 #content {
-    width: 800px;
-    opacity: 1.0;
-    filter: 1.0;
+    /*width: 100%;*/
+    /*opacity: 1.0;*/
+    /*filter: 1.0;*/
 }
 
 #resumeContainer {
-    position: absolute;
-    top: 0;
-    left: auto;
-    right: auto;
-    z-index: 100;
-    width: 100%;
-    background-color: #333;
     opacity: 0.9;
     filter: 0.9;
+    margin: 10px;
 }
 
 table {
@@ -105,8 +124,7 @@ p {
     color: #FFF;
 }
 
-.workHeader {
-}
+.workHeader {}
 
 .designation {
     font-size: 10px;
@@ -134,7 +152,14 @@ p {
     margin-top: 10px;
 }
 
+
+
+
+
+
+
 /*** experience ***/
+
 .experience {
     background-color: #DDD;
     color: #1F2F3D;
@@ -176,5 +201,4 @@ p {
     -webkit-box-shadow: inset 0 0 20px #000;
     -moz-box-shadow: inset 0 0 20px #000;
     box-shadow: inset 0 0 20px #000;
-
 }

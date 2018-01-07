@@ -48,7 +48,20 @@ ResumeBuilder.prototype = {
         });
         $("#close").click(function() {
             $("#container").html("");
-        })
+        });
+        $(".zoomIn").click(function() {
+            var zoomLevel = parseFloat($("#resumeContainer").css("zoom"));
+            var nextZoom = zoomLevel + 0.02;
+            console.log(nextZoom);
+            $("#resumeContainer").animate({ 'zoom': nextZoom }, 0);
+        });
+
+        $(".zoomOut").click(function() {
+            var zoomLevel = parseFloat($("#resumeContainer").css("zoom"));
+            var nextZoom = zoomLevel - 0.02;
+            console.log(nextZoom);
+            $("#resumeContainer").animate({ 'zoom': nextZoom }, 0);
+        });
     }
 };
 

@@ -61,10 +61,10 @@ h4 {
 #input {
     float: left;
     width: 45%;
-    background-color: black;
+    background-color: #555555;
 }
 
 #output {
     float: left;
-    width: 45%;
+    width: 55%;
 }
