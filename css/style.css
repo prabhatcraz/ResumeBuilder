@@ -31,8 +31,6 @@ h1 {
 
 #content {
     width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     opacity: 1.0;
     filter: 1.0;
 }
@@ -51,8 +49,6 @@ h1 {
 
 table {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 td {
@@ -66,9 +62,7 @@ li {
 ul,
 p {
     margin: 0;
-    /* padding-left: 25px; */
 }
-
 
 #phone-icon {
     height: 18px;
@@ -80,7 +74,6 @@ p {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    background-image: url("prabhat.png");
     background-repeat: no-repeat;
 }
 
@@ -113,7 +106,6 @@ p {
 }
 
 .workHeader {
-    /*margin-top: 20px;*/
 }
 
 .designation {
@@ -178,4 +170,11 @@ p {
     margin: 5px;
     font-weight: bold;
     text-orientation: sideways-right;
+}
+
+.shadowed {
+    -webkit-box-shadow: inset 0 0 20px #000;
+    -moz-box-shadow: inset 0 0 20px #000;
+    box-shadow: inset 0 0 20px #000;
+
 }
