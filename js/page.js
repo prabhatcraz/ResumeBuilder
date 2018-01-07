@@ -1,5 +1,4 @@
 function PageController(argument) {
-
 }
 
 PageController.prototype = {
@@ -40,7 +39,7 @@ PageController.prototype = {
 
         this.editor.on("change", function() {
             self.refreshResume();
-            self.save();
+            // self.save();
         });
         var editoContent = localStorage.resumeContent || JSON.stringify(resumeData, null, 2);
         self.editor.setValue(editoContent);
@@ -51,14 +50,9 @@ PageController.prototype = {
             window.print();
         });
 
-        $("#generateResume").click(function(event) {
-            event.preventDefault();
-            self.refreshResume();
-        });
-
         $("#save").click(function(event) {
             event.preventDefault();
-
+            localStorage.resumeContent = self.editor.getValue();
         });
 
         $(document).keyup(function(e) {
@@ -67,6 +61,6 @@ PageController.prototype = {
             }
         });
 
-        // self.refreshResume();
+        self.refreshResume();
     }
 };

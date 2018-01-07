@@ -12,17 +12,8 @@
 
     .container {
         display: block;
-        margin: 0 auto;
-        /*margin-bottom: 0.5cm;*/
-        box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        margin: 0;
     }
-
-    /*#resumeContainer {
-        background-color: #333;
-        opacity: 0.9;
-        filter: 0.9;
-        margin: 10px;
-    }*/
 }
 
 @page {
@@ -33,9 +24,7 @@
 page {
     background: white;
     display: block;
-    margin: 0 auto;
-    /*margin-bottom: 0.5cm;*/
-    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    margin: 0;
     width: 21cm;
     height: 27.7cm;
 }
@@ -63,7 +52,7 @@ h1 {
 #resumeContainer {
     opacity: 0.9;
     filter: 0.9;
-    margin: 10px;
+    /*margin: 10px;*/
 }
 
 table {
@@ -151,12 +140,6 @@ p {
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
-
-
-
-
-
 
 /*** experience ***/
 
