@@ -58,13 +58,5 @@ h4 {
     font-family: "Times New Roman", Times, serif;
 }
 
-#input {
-    float: left;
-    width: 45%;
-    background-color: #555555;
-}
-
 #output {
-    float: left;
-    width: 55%;
 }

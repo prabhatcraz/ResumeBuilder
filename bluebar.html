@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume Builder</title>
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/codeinput.css">
+
+    <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="js/lib/jsoneditor.min.js"></script>
+    <script type="text/javascript" src="js/data/data.js"></script>
+    <!-- Core Mirror Specific import start-->
+    <script type="text/javascript" src="js/codemirror/codemirror.js"></script>
+    <script src="js/codemirror/addon/matchbrackets.js"></script>
+    <script src="js/codemirror/addon/continuecomment.js"></script>
+    <script src="js/codemirror/addon/comment.js"></script>
+    <script src="js/codemirror/javascript.js"></script>
+    <!-- Core Mirro specific import end -->
+    <script type="text/javascript" src="js/constants.js"></script>
+    <script type="text/javascript" src="js/builder.js"></script>
+    <script type="text/javascript" src="js/page.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="noprint">
+        <h1>Resume Builder</h1>
+    </header>
+    <div>
+        <div class="sideBar noprint">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Click on the resume area to edit.</li>
+                <li>Contents are auto-saved in browser.</li>
+            </ul>
+            <a title="Reset content" id="clear" href="#" onclick="resetHtml()">Reset</a><br/>
+            <a title="Reset content" id="print" href="#" onclick="window.print()">Print</a>
+        </div>
+        <div class="resumeSection" data-template-id="blueside"></div>
+    </div>
+    <footer></footer>
+    <script type="text/template" id="blueside">
+        <div id="output" data-resume-template-id="blueside" contenteditable="true">
+            <page id="resumeContainer">
+                <div id="container">
+                    <table id="content">
+                        <tbody>
+                            <tr>
+                                <td class="bio">
+                                    <div class="header">
+                                        <div class="row">
+                                            <div contenteditable="false">
+                                                <img class="profileImage" src="images/avatar.jpg">
+                                                <input class="noprint" type="file" id="files" name="files[]" multiple />
+                                            </div>
+                                            <div class="name">
+                                                Your Name
+                                            </div><span class="name"></span>
+                                            <span class="designation"> Designation @ Company</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="aboutHeader leftColumnHeader whiteBottomBorder">
+                                            About Me
+                                        </p>
+                                        <div class="aboutDetails leftColumnDetails">
+                                            This is about me, could be few sentences.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="aboutHeader leftColumnHeader whiteBottomBorder">
+                                            SKILLS HIGHLIGHTS:
+                                        </p>
+                                        <div class="aboutDetails leftColumnDetails">
+                                            List down names of the skills like coding languages, etc.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="aboutHeader leftColumnHeader whiteBottomBorder">
+                                            EDUCATION:
+                                        </p>
+                                        <div class="aboutDetails leftColumnDetails">
+                                            Whats you education?
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="aboutHeader leftColumnHeader whiteBottomBorder">
+                                            CONTACT ME:
+                                        </p>
+                                        <div class="aboutDetails leftColumnDetails">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Mobile</td>
+                                                        <td>:</td>
+                                                        <td>+11-8888888</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email</td>
+                                                        <td>:</td>
+                                                        <td><a href="mailto:someone@something.com" target="_top">someone@something.com</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Address</td>
+                                                        <td>:</td>
+                                                        <td>Here I live</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="aboutHeader leftColumnHeader whiteBottomBorder">
+                                            PERSONAL INFO:
+                                        </p>
+                                        <div class="aboutDetails leftColumnDetails">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Name</td>
+                                                        <td>:</td>
+                                                        <td>Your name</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Birthday</td>
+                                                        <td>:</td>
+                                                        <td>DD-Mon-YYYY</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Languages</td>
+                                                        <td>:</td>
+                                                        <td>English, Hindi</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="experience">
+                                    <div class="rightColumnHeader blueBottomBorder">
+                                        EXPERIENCE
+                                    </div>
+                                    <div class="company">
+                                        <span class="companyName">Company 1</span>
+                                        <span class="duration">(Jan-2016 - till date)</span>
+                                        <p class="workdDetailHeader">
+                                            Key Deliverables:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                deliverable 1
+                                            </li>
+                                            <li>
+                                                deliverable 2
+                                            </li>
+                                        </ul>
+                                        <p class="workdDetailHeader">
+                                            Details:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                item 1
+                                            </li>
+                                            <li>
+                                                item 2
+                                            </li>
+                                            <li>
+                                                item 3
+                                            </li>
+                                            <li>
+                                                item 4
+                                            </li>
+                                            <li>
+                                                item 5
+                                            </li>
+                                            <li>
+                                                item 6
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="company">
+                                        <span class="companyName">company 2</span>
+                                        <span class="duration">(Feb-2013 - Jan 2016)</span>
+                                        <p class="workdDetailHeader">
+                                            Key Deliverables:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                item 1
+                                            </li>
+                                            <li>
+                                                item 2
+                                            </li>
+                                        </ul>
+                                        <p class="workdDetailHeader">
+                                            Details:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                item 1
+                                            </li>
+                                            <li>
+                                                item 2
+                                            </li>
+                                            <li>
+                                                item 3
+                                            </li>
+                                            <li>
+                                                item 4
+                                            </li>
+                                            <li>
+                                                item 5
+                                            </li>
+                                            <li>
+                                                item 6
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="company">
+                                        <span class="companyName">company 3</span>
+                                        <span class="duration">(July 2011 - Feb 2013)</span>
+                                        <p class="workdDetailHeader">
+                                            Key Deliverables:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                item 1
+                                            </li>
+                                            <li>
+                                                item 2
+                                            </li>
+                                            <li>
+                                                item 3
+                                            </li>
+                                            <li>
+                                                item 4
+                                            </li>
+                                            <li>
+                                                item 5
+                                            </li>
+                                            <li>
+                                                item 6
+                                            </li>
+                                        </ul>
+                                        <p class="workdDetailHeader">
+                                            Details:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                item 1
+                                            </li>
+                                            <li>
+                                                item 2
+                                            </li>
+                                            <li>
+                                                item 3
+                                            </li>
+                                            <li>
+                                                item 4
+                                            </li>
+                                            <li>
+                                                item 5
+                                            </li>
+                                            <li>
+                                                item 6
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </page>
+        </div>
+    </script>
+</body>
+
+</html>

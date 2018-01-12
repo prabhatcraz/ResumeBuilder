@@ -1,0 +1,10 @@
+.templateImage {
+    margin: 20px;
+    width: 200px;
+    border-radius: 5px;
+    border: solid 2px white;
+}
+
+.blueside {
+    background: url("../images/templates/blueside.jpg") no-repeat fixed center;
+}

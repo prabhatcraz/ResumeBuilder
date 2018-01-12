@@ -2,113 +2,20 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
     <title>Resume Builder</title>
-    <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/lib/underscore-min.js"></script>
-    <script type="text/javascript" src="js/lib/jsoneditor.min.js"></script>
-    <script type="text/javascript" src="js/data/data.js"></script>
-    <!-- Core Mirror Specific import start-->
-    <script type="text/javascript" src="js/codemirror/codemirror.js"></script>
-    <script src="js/codemirror/addon/matchbrackets.js"></script>
-    <script src="js/codemirror/addon/continuecomment.js"></script>
-    <script src="js/codemirror/addon/comment.js"></script>
-    <script src="js/codemirror/javascript.js"></script>
-    <!-- Core Mirro specific import end -->
-    <script type="text/javascript" src="js/constants.js"></script>
-    <script type="text/javascript" src="js/builder.js"></script>
-    <script type="text/javascript" src="js/page.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/codeinput.css">
-    <link rel="stylesheet" href="css/lib/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="css/general.css" />
 </head>
 
 <body>
-    <div id="input" class="noprint">
-        <div class="controls noprint">
-            <h1 class="pageheader">Resume Builder</h1>
-        </div>
-        <div class="message">
-            <p>Tool to generate a resume from JSON.</p>
-            <h4>Instructions:</h4>
-            <ul>
-                <li class="instruction">Fill in your details in JSON format as show in the example. You cannot go beyond the hirarchy as defined in example.</li>
-                <li class="instruction">To preview, click the preview link.</li>
-                <li class="instruction">To get back to editor, press escape.</li>
-                <li class="instruction">To save unfinished work, press save link.</li>
-            </ul>
-        </div>
-        <div id="jsonInput" class="noprint">
-            <div>
-                <textarea id="code" name="code"></textarea>
-            </div>
-        </div>
-        <div>
-            <a href="#" id="genratePdf" class="navigationLinks">Generate Pdf</a>
-            <a href="#" id="save" class="navigationLinks">Save</a>
-            <span class="savedMessage navigationLinks">File Saved</span>
-        </div>
+    <header class="noprint">
+        <h1>Resume Builder</h1>
+    </header>
+    <div>
+        <a href="bluebar.html" >
+            <img src="images/templates/blueside.jpg" class="templateImage blueside">
+        </a>
     </div>
-    <div id="output">
-        <page id="resumeContainer">
-            <div id="container">
-            </div>
-        </page>
-    </div>
-    <script type="text/template" id="layout">
-        <table id="content">
-            <tr>
-                <td class="bio">
-                    <div class="header">
-                        <div class="row">
-                            <div>
-                                <img class="profileImage" src="<%= imageSrc %>">
-                            </div>
-                            <div class="name">
-                                <%= name %>
-                            </div><span class="name"></span>
-                            <span class="designation"> <%= designation %></span>
-                        </div>
-                    </div>
-                </td>
-                <td class="experience"></td>
-            </tr>
-        </table>
-    </script>
-    <script type="text/template" id="leftSectionTile">
-        <div>
-            <p class="aboutHeader leftColumnHeader whiteBottomBorder">
-                <%= title %>
-            </p>
-            <div class="aboutDetails leftColumnDetails">
-                <%= detail %>
-            </div>
-        </div>
-    </script>
-    <script type="text/template" id="rightSectionGroup">
-        <div class="rightColumnHeader blueBottomBorder">
-            <%= groupTitle %>
-        </div>
-        <% _.each(sections, function(section) { %>
-            <div class="company">
-                <span class="companyName"><%= section.companyName %></span>
-                <span class="duration"><%= section.duration %></span>
-                <% _.each(section.details, function(detail) { %>
-                    <p class="workdDetailHeader">
-                        <%= detail.title %>
-                    </p>
-                    <ul>
-                        <% _.each(detail.items, function(item) { %>
-                            <li>
-                                <%= item %>
-                            </li>
-                            <% }); %>
-                    </ul>
-                    <% }); %>
-            </div>
-            <% }); %>
-    </script>
 </body>
 
 </html>
